@@ -1,3 +1,7 @@
+add new
+
+Sat 13 Apr 08:54:40 CST 2024
+
 …or create a new repository on the command line
 echo "# public_test" >> README.mdgit initgit add README.mdgit commit -m "first commit"git branch -M mastergit remote add origin git@github.com:lqingshun/public_test.gitgit push -u origin master
 …or push an existing repository from the command line
