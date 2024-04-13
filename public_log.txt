@@ -1,0 +1,48 @@
+…or create a new repository on the command line
+echo "# public_test" >> README.mdgit initgit add README.mdgit commit -m "first commit"git branch -M mastergit remote add origin git@github.com:lqingshun/public_test.gitgit push -u origin master
+…or push an existing repository from the command line
+git remote add origin git@github.com:lqingshun/public_test.gitgit branch -M mastergit push -u origin master
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+root@p5-4G:/work/test1/public_test# vi public_test.sh
+root@p5-4G:/work/test1/public_test# source public_test.sh 
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /work/test1/public_test/.git/
+[master (root-commit) 0eb344b] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 216 bytes | 216.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:lqingshun/public_test.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+root@p5-4G:/work/test1/public_test# git log
+commit 0eb344b0c06b4f099a0a3b86d1a581152d21c586 (HEAD -> master, origin/master)
+Author: pi5user <pi5user@163.com>
+Date:   Sat Apr 13 08:48:28 2024 +0800
+
+    first commit
+root@p5-4G:/work/test1/public_test# git branch -av
+* master                0eb344b first commit
+  remotes/origin/master 0eb344b first commit
+root@p5-4G:/work/test1/public_test# ll
+total 8
+-rw-r--r-- 1 root root 233 Apr 13 08:48 public_test.sh
+-rw-r--r-- 1 root root  14 Apr 13 08:48 README.md
+root@p5-4G:/work/test1/public_test# git add .
+root@p5-4G:/work/test1/public_test# git commit -m "public_test"
+
+
+
